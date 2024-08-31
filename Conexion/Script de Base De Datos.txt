@@ -1,0 +1,36 @@
+-- Crear la base de datos de prueba
+CREATE DATABASE TestBD;
+
+-- Usar la base de datos recién creada
+USE TestBD;
+
+-- Crear la tabla con 10 atributos
+CREATE TABLE Empleados (
+    EmpleadoID INT PRIMARY KEY IDENTITY(1,1),   -- Atributo 1: ID del empleado (clave primaria)
+    Nombre NVARCHAR(50),                        -- Atributo 2: Nombre
+    Apellido NVARCHAR(50),                      -- Atributo 3: Apellido
+    CorreoElectronico NVARCHAR(100) UNIQUE,     -- Atributo 4: Correo electrónico (único)
+    NumeroTelefono NVARCHAR(20),                -- Atributo 5: Número de teléfono
+    FechaContratacion DATE,                     -- Atributo 6: Fecha de contratación
+    TituloTrabajo NVARCHAR(50),                 -- Atributo 7: Título del trabajo
+    Departamento NVARCHAR(50),                  -- Atributo 8: Departamento
+    Salario DECIMAL(18, 2),                     -- Atributo 9: Salario
+    Activo BIT DEFAULT 1                        -- Atributo 10: Estado activo (1 = Activo, 0 = Inactivo)
+);
+
+-- Insertar datos de prueba en la tabla
+INSERT INTO Empleados (Nombre, Apellido, CorreoElectronico, NumeroTelefono, FechaContratacion, TituloTrabajo, Departamento, Salario, Activo)
+VALUES 
+('Juan', 'Pérez', 'juan.perez@ejemplo.com', '123-456-7890', '2022-01-10', 'Ingeniero de Software', 'TI', 75000, 1),
+('Ana', 'Gómez', 'ana.gomez@ejemplo.com', '098-765-4321', '2023-03-15', 'Analista de Datos', 'Inteligencia de Negocios', 65000, 1),
+('Miguel', 'Rodríguez', 'miguel.rodriguez@ejemplo.com', '567-890-1234', '2021-07-21', 'Administrador de Sistemas', 'TI', 60000, 1),
+('Lucía', 'Fernández', 'lucia.fernandez@ejemplo.com', '456-789-0123', '2020-11-03', 'Gerente de Proyectos', 'Operaciones', 85000, 1),
+('Carlos', 'López', 'carlos.lopez@ejemplo.com', '321-654-0987', '2019-08-19', 'Desarrollador Web', 'Desarrollo', 70000, 1),
+('María', 'Martínez', 'maria.martinez@ejemplo.com', '654-321-8765', '2022-09-28', 'Especialista en Recursos Humanos', 'Recursos Humanos', 55000, 1),
+('José', 'Ramírez', 'jose.ramirez@ejemplo.com', '789-012-3456', '2023-01-05', 'Contador', 'Finanzas', 60000, 1),
+('Elena', 'Sánchez', 'elena.sanchez@ejemplo.com', '890-123-4567', '2021-04-12', 'Consultora de Marketing', 'Marketing', 72000, 1),
+('Luis', 'Hernández', 'luis.hernandez@ejemplo.com', '901-234-5678', '2020-02-20', 'Ingeniero de Redes', 'TI', 78000, 1),
+('Sofía', 'Castro', 'sofia.castro@ejemplo.com', '012-345-6789', '2022-06-14', 'Diseñadora Gráfica', 'Diseño', 62000, 1);
+
+-- Verificar los datos insertados
+SELECT * FROM Empleados;

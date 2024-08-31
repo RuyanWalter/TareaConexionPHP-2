@@ -1,0 +1,114 @@
+
+    .container {
+        margin-top: 40px;
+        max-width: 95%;
+        margin: 40px auto;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .panel-primary {
+        border-color: #007bff;
+    }
+
+    .panel-heading {
+        background-color: #007bff;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+    }
+
+    .panel-heading h4 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .panel-body {
+        border: 1px solid #ddd;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        padding: 15px;
+        background-color: #fafafa;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        background-color: #fff;
+    }
+
+
+    .table th, .table td {
+        border: 1px solid #dee2e6;
+        padding: 12x;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+ 
+    .table th {
+        background-color: #f8f9fa;
+        color: 626262;
+        font-weight: 600;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #e9ecef;
+    }
+
+    .table-bordered {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+
+
+    #alumnos th, #alumnos td {
+        font-size: 16px;
+     
+    }
+
+    /* Estilo de las columnas específicas */
+    #alumnos th:nth-child(1), #alumnos td:nth-child(1) { /* ID */
+        width: 5%;
+    }
+
+    #alumnos th:nth-child(2), #alumnos td:nth-child(2), /* Nombre */
+    #alumnos th:nth-child(3), #alumnos td:nth-child(3), /* Apellido */
+    #alumnos th:nth-child(4), #alumnos td:nth-child(4) { /* Correo */
+        width: 15%;
+    }
+
+    #alumnos th:nth-child(5), #alumnos td:nth-child(5) { /* Teléfono */
+        width: 15%;
+    }
+
+    #alumnos th:nth-child(7), #alumnos td:nth-child(7) { /* Título de Trabajo */
+        width: 20%;
+    }
+
+    #alumnos th:nth-child(9), #alumnos td:nth-child(9) { /* Salario */
+        width: 10%;
+    }
+    
+    /* Mejoras de interactividad */
+    .table-hover tbody tr:hover td {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .table-hover tbody tr:hover th {
+        background-color: #007bff;
+        color: #fff;
+    }
